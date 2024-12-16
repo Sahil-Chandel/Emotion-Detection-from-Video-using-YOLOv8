@@ -1,0 +1,16 @@
+ Purpose : HTML template for the web interface.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Emotion Detection</title>
+</head>
+<body>
+    <h1>Upload a Video</h1>
+    <form action="/process" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*">
+        <button type="submit">Process</button>
+    </form>
+</body>
+</html>

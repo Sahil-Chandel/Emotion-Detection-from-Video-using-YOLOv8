@@ -1,0 +1,24 @@
+import yaml
+
+# Load config.yaml
+with open("config.yaml", "r") as file:
+    config = yaml.safe_load(file)
+
+# Access dataset paths
+wider_face_path = config["datasets"]["wider_face"]
+fer2013_train_path = config["datasets"]["fer2013"]["train"]
+fer2013_val_path = config["datasets"]["fer2013"]["val"]
+
+# Access model paths
+yolov8_model_path = config["models"]["yolov8"]
+emotion_model_path = config["models"]["emotion_classifier"]
+
+# Access training parameters
+yolov8_epochs = config["training"]["yolov8"]["epochs"]
+emotion_epochs = config["training"]["emotion_classifier"]["epochs"]
+
+# Access deployment settings
+api_host = config["deployment"]["api_host"]
+api_port = config["deployment"]["api_port"]
+
+print(f"YOLOv8 model path: {yolov8_model_path}")
